@@ -11,14 +11,92 @@
     }
 
     @keyframes bounce-animation {
-      0%, 100%{transform: translateY(0);}
-      50%{transform: translateY(15px);}
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(15px);
+      }
+    }
+
+    @keyframes open {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 100;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes open-INFO {
+      0% {
+        top: 30%;
+        scale: 5;
+        right: 49%;
+      }
+
+      30% {
+        scale: 4.5;
+        right: 49%;
+        top: 30%;
+      }
     }
   </style>
 </head>
 
 <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-  <p class="absolute top-10 opacity-30 animate-pulse" style="animation: bounce-animation 2s infinite ease-in-out;">© All Copyrights for Gustavo Rodrigues Cunha</p>
+
+  <!-- Tutorial -->
+  <div
+    class="w-[30px] h-[30px] bg-violet-500 absolute top-10 right-10 flex items-center justify-center rounded cursor-pointer hover:opacity-70 transition active:bg-red-500"
+    style="animation: open-INFO 5s ease-in-out;" onclick="document.getElementById('tutorial').style.display = 'flex'">
+    <button>i</button></div>
+  <div class="w-[400px] h-[500px] p-3 absolute top-[100px] right-[70px] flex flex-col gap-10 rounded hidden"
+    id="tutorial" style="background: #6a6a6a30; border: 3px solid #6a6a6a30; animation: open 1s ease-out;">
+    <button class="absolute top-0 right-0 w-[30px] h-[30px] hover:opacity-30 transition"
+      style="background: #6a6a6a30; border-radius: 0 0 0 5px;"
+      onclick="document.getElementById('tutorial').style.display = 'none'">X</button>
+    <section class="flex items-center gap-6 flex-col">
+      <strong>🚨 !!!ATENÇÃO!!! 🚨</strong>
+      <P>Você tem apenas <strong>7 Tentativas.</strong></P>
+    </section>
+    <section class="flex items-center gap-6">
+      <div
+        class="w-12 h-12 flex items-center justify-center rounded font-bold text-xl uppercase bg-gray-600 text-white">A
+      </div>
+      <p>Esta letra não exite na palavra;</p>
+    </section>
+    <section class="flex items-center gap-6">
+      <div
+        class="w-12 h-12 flex items-center justify-center rounded font-bold text-xl uppercase bg-yellow-400 text-white">
+        A</div>
+      <p>Esta letra está correta, mas no lugar errado;</p>
+    </section>
+    <section class="flex items-center gap-6">
+      <div
+        class="w-12 h-12 flex items-center justify-center rounded font-bold text-xl uppercase bg-green-500 text-white">A
+      </div>
+      <p>Esta letra está correta, e no lugar no certo;</p>
+    </section>
+    <section class="flex items-center gap-6 items-center justify-center text-xl">
+      <p class="text-violet-400 animate-pulse">Boa sorte!</p>
+    </section>
+    <section class="flex items-center gap-6 items-center justify-center text-xl">
+      <button class="w-[70%] h-[30px] hover:opacity-30 transition rounded"
+      style="background: #6a6a6a30;"
+      onclick="document.getElementById('tutorial').style.display = 'none'">Comece a jogar!</button>
+    </section>
+  </div>
+
+
+  <p class="absolute top-10 opacity-30 animate-pulse" style="animation: bounce-animation 2s infinite ease-in-out;">© All
+    Copyrights for Gustavo Rodrigues Cunha</p>
   <div class="text-center space-y-6">
     <h1 class="text-3xl font-bold">Jogo de Adivinhação</h1>
     <p class="text-teal-600 opacity-50">— Made by: <strong>Gustavo Rodrigues Cunha —</strong></p>

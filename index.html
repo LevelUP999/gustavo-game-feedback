@@ -130,6 +130,7 @@
       } else if (tentativas >= maxTentativas) {
         message.textContent = `Você perdeu! A palavra era "${palavraSecreta.toUpperCase()}".`;
         form.remove();
+        feedbackForm.classList.remove("hidden");
       } else {
         message.textContent = "";
       }

@@ -3,18 +3,25 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Jogo de Adivinhação - Termo</title>
+  <title>SenacTEC | Jogo de Adivinhação 😂</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     button.rounded-md.transition[type=submit]:hover {
       transform: translateY(3px);
     }
+
+    @keyframes bounce-animation {
+      0%, 100%{transform: translateY(0);}
+      50%{transform: translateY(15px);}
+    }
   </style>
 </head>
 
 <body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+  <p class="absolute top-10 opacity-30 animate-pulse" style="animation: bounce-animation 2s infinite ease-in-out;">© All Copyrights for Gustavo Rodrigues Cunha</p>
   <div class="text-center space-y-6">
     <h1 class="text-3xl font-bold">Jogo de Adivinhação</h1>
+    <p class="text-teal-600 opacity-50">— Made by: <strong>Gustavo Rodrigues Cunha —</strong></p>
 
     <div id="board" class="space-y-2"></div>
 
